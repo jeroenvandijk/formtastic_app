@@ -372,3 +372,51 @@ Processing NormalExamplesController#show (for 127.0.0.1 at 2009-10-22 20:21:48) 
 Rendering template within layouts/normal_examples
 Rendering normal_examples/show
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/normal_examples/1]
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:26:50) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 90ms (View: 86, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+REQUESTING PAGE: POST /formtastic_examples with {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/new"}
+
+
+Processing FormtasticExamplesController#create (for 127.0.0.1 at 2009-10-22 20:26:50) [POST]
+  Parameters: {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}}
+  [4;36;1mFormtasticExample Create (0.5ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:26:50', '2004-11-25', '2009-10-22 18:26:50')[0m
+Redirected to http://www.example.com/formtastic_examples/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#show (for 127.0.0.1 at 2009-10-22 20:26:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFormtasticExample Load (0.3ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 1) [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/show
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/1]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:26:50) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 61ms (View: 57, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+REQUESTING PAGE: POST /normal_examples with {"normal_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/normal_examples/new"}
+
+
+Processing NormalExamplesController#create (for 127.0.0.1 at 2009-10-22 20:26:50) [POST]
+  Parameters: {"normal_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}, "commit"=>"Create"}
+  [4;36;1mNormalExample Create (0.4ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:26:50', '2004-11-25', '2009-10-22 18:26:50')[0m
+Redirected to http://www.example.com/normal_examples/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/normal_examples]
+REQUESTING PAGE: GET http://www.example.com/normal_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/normal_examples"}
+
+
+Processing NormalExamplesController#show (for 127.0.0.1 at 2009-10-22 20:26:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNormalExample Load (0.3ms)[0m   [0mSELECT * FROM "normal_examples" WHERE ("normal_examples"."id" = 1) [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/show
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/normal_examples/1]
