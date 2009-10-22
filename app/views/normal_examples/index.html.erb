@@ -1,0 +1,20 @@
+<h1>Listing normal_examples</h1>
+
+<table>
+  <tr>
+    <th>Date of birth</th>
+  </tr>
+
+<% @normal_examples.each do |normal_example| %>
+  <tr>
+    <td><%=h normal_example.date_of_birth %></td>
+    <td><%= link_to 'Show', normal_example %></td>
+    <td><%= link_to 'Edit', edit_normal_example_path(normal_example) %></td>
+    <td><%= link_to 'Destroy', normal_example, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New normal_example', new_normal_example_path %>

@@ -1,0 +1,14 @@
+<h1>New formtastic_example</h1>
+
+<% semantic_form_for(@formtastic_example) do |f| %>
+  <%= f.error_messages %>
+
+  <% f.inputs do %>
+    <%= f.input :date_of_birth %>
+  <% end %>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', formtastic_examples_path %>

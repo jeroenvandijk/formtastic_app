@@ -1,0 +1,374 @@
+# Logfile created on Thu Oct 22 20:16:23 +0200 2009REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:16:24) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-10-22 20:16:24) [GET]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:16:24) [GET]
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2009-10-22 20:16:24) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateNormalExamples (20091022181440)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "normal_examples" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_birth" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091022181440')[0m
+Migrating to CreateFormtasticExamples (20091022181514)
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCREATE TABLE "formtastic_examples" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_of_birth" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091022181514')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("formtastic_examples")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("normal_examples")[0m
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:17:10) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 135ms (View: 131, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+  [4;36;1mFormtasticExample Create (0.4ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+  [4;35;1mFormtasticExample Create (0.1ms)[0m   [0mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+  [4;36;1mFormtasticExample Create (0.1ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+  [4;35;1mFormtasticExample Create (0.1ms)[0m   [0mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#index (for 127.0.0.1 at 2009-10-22 20:17:10) [GET]
+  [4;36;1mFormtasticExample Load (0.6ms)[0m   [0;1mSELECT * FROM "formtastic_examples" [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/index
+Completed in 20ms (View: 18, DB: 1) | 200 OK [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: DELETE /formtastic_examples/3 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#destroy (for 127.0.0.1 at 2009-10-22 20:17:10) [DELETE]
+  Parameters: {"id"=>"3"}
+  [4;35;1mFormtasticExample Load (0.3ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 3) [0m
+  [4;36;1mFormtasticExample Destroy (0.1ms)[0m   [0;1mDELETE FROM "formtastic_examples" WHERE "id" = 3[0m
+Redirected to http://www.example.com/formtastic_examples
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/formtastic_examples/3]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/3"}
+
+
+Processing FormtasticExamplesController#index (for 127.0.0.1 at 2009-10-22 20:17:10) [GET]
+  [4;35;1mFormtasticExample Load (0.5ms)[0m   [0mSELECT * FROM "formtastic_examples" [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/index
+Completed in 15ms (View: 13, DB: 1) | 200 OK [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:17:10) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+  [4;36;1mNormalExample Create (0.5ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+  [4;35;1mNormalExample Create (0.1ms)[0m   [0mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+  [4;36;1mNormalExample Create (0.1ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+  [4;35;1mNormalExample Create (0.1ms)[0m   [0mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:17:10', NULL, '2009-10-22 18:17:10')[0m
+REQUESTING PAGE: GET http://www.example.com/normal_examples with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#index (for 127.0.0.1 at 2009-10-22 20:17:10) [GET]
+  [4;36;1mNormalExample Load (0.5ms)[0m   [0;1mSELECT * FROM "normal_examples" [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/index
+Completed in 19ms (View: 17, DB: 1) | 200 OK [http://www.example.com/normal_examples]
+REQUESTING PAGE: DELETE /normal_examples/3 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/normal_examples"}
+
+
+Processing NormalExamplesController#destroy (for 127.0.0.1 at 2009-10-22 20:17:10) [DELETE]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNormalExample Load (0.3ms)[0m   [0mSELECT * FROM "normal_examples" WHERE ("normal_examples"."id" = 3) [0m
+  [4;36;1mNormalExample Destroy (0.1ms)[0m   [0;1mDELETE FROM "normal_examples" WHERE "id" = 3[0m
+Redirected to http://www.example.com/normal_examples
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/normal_examples/3]
+REQUESTING PAGE: GET http://www.example.com/normal_examples with {} and HTTP headers {"HTTP_REFERER"=>"/normal_examples/3"}
+
+
+Processing NormalExamplesController#index (for 127.0.0.1 at 2009-10-22 20:17:10) [GET]
+  [4;35;1mNormalExample Load (0.5ms)[0m   [0mSELECT * FROM "normal_examples" [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/index
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://www.example.com/normal_examples]
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:19:00) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 134ms (View: 129, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+REQUESTING PAGE: POST /formtastic_examples with {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/new"}
+
+
+Processing FormtasticExamplesController#create (for 127.0.0.1 at 2009-10-22 20:19:00) [POST]
+  Parameters: {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}}
+  [4;36;1mFormtasticExample Create (0.5ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:00', '2004-11-25', '2009-10-22 18:19:00')[0m
+Redirected to http://www.example.com/formtastic_examples/1
+Completed in 5ms (DB: 0) | 302 Found [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#show (for 127.0.0.1 at 2009-10-22 20:19:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFormtasticExample Load (0.3ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 1) [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/show
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/1]
+  [4;36;1mFormtasticExample Create (0.4ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:00', NULL, '2009-10-22 18:19:00')[0m
+  [4;35;1mFormtasticExample Create (0.1ms)[0m   [0mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:00', NULL, '2009-10-22 18:19:00')[0m
+  [4;36;1mFormtasticExample Create (0.1ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:00', NULL, '2009-10-22 18:19:00')[0m
+  [4;35;1mFormtasticExample Create (0.1ms)[0m   [0mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:00', NULL, '2009-10-22 18:19:00')[0m
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#index (for 127.0.0.1 at 2009-10-22 20:19:00) [GET]
+  [4;36;1mFormtasticExample Load (0.6ms)[0m   [0;1mSELECT * FROM "formtastic_examples" [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/index
+Completed in 20ms (View: 18, DB: 1) | 200 OK [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: DELETE /formtastic_examples/3 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#destroy (for 127.0.0.1 at 2009-10-22 20:19:01) [DELETE]
+  Parameters: {"id"=>"3"}
+  [4;35;1mFormtasticExample Load (0.3ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 3) [0m
+  [4;36;1mFormtasticExample Destroy (0.1ms)[0m   [0;1mDELETE FROM "formtastic_examples" WHERE "id" = 3[0m
+Redirected to http://www.example.com/formtastic_examples
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/formtastic_examples/3]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/3"}
+
+
+Processing FormtasticExamplesController#index (for 127.0.0.1 at 2009-10-22 20:19:01) [GET]
+  [4;35;1mFormtasticExample Load (0.4ms)[0m   [0mSELECT * FROM "formtastic_examples" [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:19:01) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+  [4;36;1mNormalExample Create (0.4ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:01', NULL, '2009-10-22 18:19:01')[0m
+  [4;35;1mNormalExample Create (0.2ms)[0m   [0mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:01', NULL, '2009-10-22 18:19:01')[0m
+  [4;36;1mNormalExample Create (1.4ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:01', NULL, '2009-10-22 18:19:01')[0m
+  [4;35;1mNormalExample Create (0.1ms)[0m   [0mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:01', NULL, '2009-10-22 18:19:01')[0m
+REQUESTING PAGE: GET http://www.example.com/normal_examples with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#index (for 127.0.0.1 at 2009-10-22 20:19:01) [GET]
+  [4;36;1mNormalExample Load (0.6ms)[0m   [0;1mSELECT * FROM "normal_examples" [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/index
+Completed in 18ms (View: 16, DB: 3) | 200 OK [http://www.example.com/normal_examples]
+REQUESTING PAGE: DELETE /normal_examples/3 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/normal_examples"}
+
+
+Processing NormalExamplesController#destroy (for 127.0.0.1 at 2009-10-22 20:19:01) [DELETE]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNormalExample Load (0.3ms)[0m   [0mSELECT * FROM "normal_examples" WHERE ("normal_examples"."id" = 3) [0m
+  [4;36;1mNormalExample Destroy (0.1ms)[0m   [0;1mDELETE FROM "normal_examples" WHERE "id" = 3[0m
+Redirected to http://www.example.com/normal_examples
+Completed in 2ms (DB: 0) | 302 Found [http://www.example.com/normal_examples/3]
+REQUESTING PAGE: GET http://www.example.com/normal_examples with {} and HTTP headers {"HTTP_REFERER"=>"/normal_examples/3"}
+
+
+Processing NormalExamplesController#index (for 127.0.0.1 at 2009-10-22 20:19:01) [GET]
+  [4;35;1mNormalExample Load (0.5ms)[0m   [0mSELECT * FROM "normal_examples" [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/index
+Completed in 14ms (View: 12, DB: 1) | 200 OK [http://www.example.com/normal_examples]
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:19:19) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 134ms (View: 129, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+REQUESTING PAGE: POST /formtastic_examples with {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/new"}
+
+
+Processing FormtasticExamplesController#create (for 127.0.0.1 at 2009-10-22 20:19:19) [POST]
+  Parameters: {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}}
+  [4;36;1mFormtasticExample Create (0.5ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:19', '2004-11-25', '2009-10-22 18:19:19')[0m
+Redirected to http://www.example.com/formtastic_examples/1
+Completed in 4ms (DB: 1) | 302 Found [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#show (for 127.0.0.1 at 2009-10-22 20:19:19) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFormtasticExample Load (0.5ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 1) [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/show
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/1]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:19:19) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+  [4;36;1mNormalExample Create (0.4ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:19', NULL, '2009-10-22 18:19:19')[0m
+  [4;35;1mNormalExample Create (0.1ms)[0m   [0mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:19', NULL, '2009-10-22 18:19:19')[0m
+  [4;36;1mNormalExample Create (0.1ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:19', NULL, '2009-10-22 18:19:19')[0m
+  [4;35;1mNormalExample Create (0.1ms)[0m   [0mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:19', NULL, '2009-10-22 18:19:19')[0m
+REQUESTING PAGE: GET http://www.example.com/normal_examples with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#index (for 127.0.0.1 at 2009-10-22 20:19:19) [GET]
+  [4;36;1mNormalExample Load (0.6ms)[0m   [0;1mSELECT * FROM "normal_examples" [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/index
+Completed in 20ms (View: 18, DB: 1) | 200 OK [http://www.example.com/normal_examples]
+REQUESTING PAGE: DELETE /normal_examples/3 with {} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/normal_examples"}
+
+
+Processing NormalExamplesController#destroy (for 127.0.0.1 at 2009-10-22 20:19:19) [DELETE]
+  Parameters: {"id"=>"3"}
+  [4;35;1mNormalExample Load (0.4ms)[0m   [0mSELECT * FROM "normal_examples" WHERE ("normal_examples"."id" = 3) [0m
+  [4;36;1mNormalExample Destroy (0.1ms)[0m   [0;1mDELETE FROM "normal_examples" WHERE "id" = 3[0m
+Redirected to http://www.example.com/normal_examples
+Completed in 2ms (DB: 1) | 302 Found [http://www.example.com/normal_examples/3]
+REQUESTING PAGE: GET http://www.example.com/normal_examples with {} and HTTP headers {"HTTP_REFERER"=>"/normal_examples/3"}
+
+
+Processing NormalExamplesController#index (for 127.0.0.1 at 2009-10-22 20:19:19) [GET]
+  [4;35;1mNormalExample Load (0.5ms)[0m   [0mSELECT * FROM "normal_examples" [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://www.example.com/normal_examples]
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:19:54) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 132ms (View: 128, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+REQUESTING PAGE: POST /formtastic_examples with {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/new"}
+
+
+Processing FormtasticExamplesController#create (for 127.0.0.1 at 2009-10-22 20:19:54) [POST]
+  Parameters: {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}}
+  [4;36;1mFormtasticExample Create (0.5ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:19:54', '2004-11-25', '2009-10-22 18:19:54')[0m
+Redirected to http://www.example.com/formtastic_examples/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#show (for 127.0.0.1 at 2009-10-22 20:19:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFormtasticExample Load (0.3ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 1) [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/show
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/1]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:19:54) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:20:26) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 133ms (View: 129, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+REQUESTING PAGE: POST /formtastic_examples with {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples/new"}
+
+
+Processing FormtasticExamplesController#create (for 127.0.0.1 at 2009-10-22 20:20:26) [POST]
+  Parameters: {"commit"=>"Create", "formtastic_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}}
+  [4;36;1mFormtasticExample Create (0.5ms)[0m   [0;1mINSERT INTO "formtastic_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:20:26', '2004-11-25', '2009-10-22 18:20:26')[0m
+Redirected to http://www.example.com/formtastic_examples/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/formtastic_examples]
+REQUESTING PAGE: GET http://www.example.com/formtastic_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/formtastic_examples"}
+
+
+Processing FormtasticExamplesController#show (for 127.0.0.1 at 2009-10-22 20:20:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mFormtasticExample Load (0.3ms)[0m   [0mSELECT * FROM "formtastic_examples" WHERE ("formtastic_examples"."id" = 1) [0m
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/show
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/1]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:20:26) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+REQUESTING PAGE: POST /normal_examples with {"normal_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/normal_examples/new"}
+
+
+Processing NormalExamplesController#create (for 127.0.0.1 at 2009-10-22 20:20:26) [POST]
+  Parameters: {"normal_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}, "commit"=>"Create"}
+  [4;36;1mNormalExample Create (0.5ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:20:26', '2004-11-25', '2009-10-22 18:20:26')[0m
+Redirected to http://www.example.com/normal_examples/1
+Completed in 4ms (DB: 0) | 302 Found [http://www.example.com/normal_examples]
+REQUESTING PAGE: GET http://www.example.com/normal_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/normal_examples"}
+
+
+Processing NormalExamplesController#show (for 127.0.0.1 at 2009-10-22 20:20:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNormalExample Load (0.3ms)[0m   [0mSELECT * FROM "normal_examples" WHERE ("normal_examples"."id" = 1) [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/show
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://www.example.com/normal_examples/1]
+REQUESTING PAGE: GET /formtastic_examples/new with {} and HTTP headers {}
+
+
+Processing FormtasticExamplesController#new (for 127.0.0.1 at 2009-10-22 20:21:48) [GET]
+Rendering template within layouts/formtastic_examples
+Rendering formtastic_examples/new
+Completed in 88ms (View: 84, DB: 0) | 200 OK [http://www.example.com/formtastic_examples/new]
+REQUESTING PAGE: GET /normal_examples/new with {} and HTTP headers {}
+
+
+Processing NormalExamplesController#new (for 127.0.0.1 at 2009-10-22 20:21:48) [GET]
+Rendering template within layouts/normal_examples
+Rendering normal_examples/new
+Completed in 128ms (View: 124, DB: 0) | 200 OK [http://www.example.com/normal_examples/new]
+REQUESTING PAGE: POST /normal_examples with {"normal_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}, "commit"=>"Create"} and HTTP headers {"HTTP_REFERER"=>"/normal_examples/new"}
+
+
+Processing NormalExamplesController#create (for 127.0.0.1 at 2009-10-22 20:21:48) [POST]
+  Parameters: {"normal_example"=>{"date_of_birth(2i)"=>"11", "date_of_birth(3i)"=>"25", "date_of_birth(1i)"=>"2004"}, "commit"=>"Create"}
+  [4;36;1mNormalExample Create (0.5ms)[0m   [0;1mINSERT INTO "normal_examples" ("updated_at", "date_of_birth", "created_at") VALUES('2009-10-22 18:21:48', '2004-11-25', '2009-10-22 18:21:48')[0m
+Redirected to http://www.example.com/normal_examples/1
+Completed in 5ms (DB: 1) | 302 Found [http://www.example.com/normal_examples]
+REQUESTING PAGE: GET http://www.example.com/normal_examples/1 with {} and HTTP headers {"HTTP_REFERER"=>"/normal_examples"}
+
+
+Processing NormalExamplesController#show (for 127.0.0.1 at 2009-10-22 20:21:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mNormalExample Load (0.3ms)[0m   [0mSELECT * FROM "normal_examples" WHERE ("normal_examples"."id" = 1) [0m
+Rendering template within layouts/normal_examples
+Rendering normal_examples/show
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://www.example.com/normal_examples/1]

@@ -1,0 +1,16 @@
+<h1>Editing formtastic_example</h1>
+
+<% form_for(@formtastic_example) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @formtastic_example %> |
+<%= link_to 'Back', formtastic_examples_path %>

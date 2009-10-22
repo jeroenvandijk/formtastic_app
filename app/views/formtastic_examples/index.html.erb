@@ -1,0 +1,20 @@
+<h1>Listing formtastic_examples</h1>
+
+<table>
+  <tr>
+    <th>Date of birth</th>
+  </tr>
+
+<% @formtastic_examples.each do |formtastic_example| %>
+  <tr>
+    <td><%=h formtastic_example.date_of_birth %></td>
+    <td><%= link_to 'Show', formtastic_example %></td>
+    <td><%= link_to 'Edit', edit_formtastic_example_path(formtastic_example) %></td>
+    <td><%= link_to 'Destroy', formtastic_example, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New formtastic_example', new_formtastic_example_path %>

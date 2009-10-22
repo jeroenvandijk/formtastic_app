@@ -1,0 +1,16 @@
+<h1>Editing normal_example</h1>
+
+<% form_for(@normal_example) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @normal_example %> |
+<%= link_to 'Back', normal_examples_path %>

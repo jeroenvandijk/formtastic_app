@@ -1,0 +1,2 @@
+module FormtasticExamplesHelper
+end

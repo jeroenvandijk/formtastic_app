@@ -1,0 +1,2 @@
+module NormalExamplesHelper
+end
